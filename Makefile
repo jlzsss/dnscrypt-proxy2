@@ -51,7 +51,7 @@ define Package/dnscrypt-proxy2/install
 	$(INSTALL_CONF) ./files/blocked-names.txt $(1)/etc/dnscrypt-proxy2/blocked-names.txt
 
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) ./files/dnscrypt-proxy.init $(1)/etc/init.d/dnscrypt-proxy2
+	$(INSTALL_BIN) ./files/dnscrypt-proxy2.init $(1)/etc/init.d/dnscrypt-proxy2
 
 	sed -i "s/^listen_addresses = .*/listen_addresses = ['127.0.0.1:5433']/" $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
 	sed -i "s/^  # blocked_names_file = 'blocked-names.txt'/blocked_names_file = 'blocked-names.txt'/" $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
