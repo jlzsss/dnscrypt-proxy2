@@ -29,7 +29,7 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/../feeds/packages/lang/golang/golang-package.mk
 
 GO_MOD_ARGS:=
-GO_PKG_BUILD_VARS+= GO111MODULE=off
+GO_PKG_BUILD_VARS+= GO111MODULE=on
 
 define Package/dnscrypt-proxy2
   SECTION:=net
