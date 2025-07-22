@@ -7,14 +7,15 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=dnscrypt-proxy2
+PKG_NAME:=dnscrypt-proxy
 PKG_VERSION:=2.1.12
 PKG_RELEASE:=1
 
-PKG_SOURCE:=dnscrypt-proxy-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/DNSCrypt/dnscrypt-proxy/tar.gz/$(PKG_VERSION)?
-PKG_HASH:=skip
-PKG_BUILD_DIR:=$(BUILD_DIR)/dnscrypt-proxy-$(PKG_VERSION)
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=https://github.com/DNSCrypt/dnscrypt-proxy.git
+PKG_SOURCE_VERSION:=2.1.12
+PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
+PKG_SOURCE:=$(PKG_NAME)-linux_x86_64-$(PKG_VERSION).tar.gz
 
 PKG_MAINTAINER:=Josef Schlehofer <josef.schlehofer@nic.cz>
 PKG_LICENSE:=ISC
